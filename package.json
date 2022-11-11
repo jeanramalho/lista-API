@@ -2,7 +2,7 @@
   "name": "lista-api",
   "version": "1.0.0",
   "description": "Projeto de lista api",
-  "main": "index.js",
+  "main": "./src/server.js",
   "scripts": {
     
       "test": "jest",
