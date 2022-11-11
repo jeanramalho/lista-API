@@ -10,4 +10,4 @@ Projeto para criar uma API de uma lista de compras.
 
 ## Descrição
 
-* API que vai receber os itens 
+* API que vai receber os dados dos itens de uma lista e armazenar em um arquivo DAO via sqLite3.
