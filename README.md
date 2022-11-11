@@ -6,3 +6,8 @@ Projeto para criar uma API de uma lista de compras.
 
 * Node JS
 * Express
+* SQLite 3
+
+## Descrição
+
+* API que vai receber os itens 
