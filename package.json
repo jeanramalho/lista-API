@@ -4,7 +4,11 @@
   "description": "Projeto de lista api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
+      "test": "jest",
+      "start": "nodemon ./src/server.js",
+      "database": "node ./src/infra/create-db.js"
+    
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,13 @@
   },
   "homepage": "https://github.com/jeanramalho/lista-API#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "jest": "^29.3.1",
+    "moment": "^2.29.4",
+    "nodemon": "^2.0.20",
+    "sqlite3": "^5.1.2",
+    "supertest": "^6.3.1"
   }
 }
+
