@@ -2,7 +2,7 @@
   "name": "lista-api",
   "version": "1.0.0",
   "description": "Projeto de lista api",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jeanramalho/lista-API.git"
   },
-  "author": "Jean Ramalho",
+  "author": "jeanramalho",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jeanramalho/lista-API/issues"
