@@ -26,4 +26,5 @@ const ADD_ITEM_DATA = `
     VALUES
         (1, 'Arroz', 3, 10,50),
         (2, 'Feijao', 1, 6,50)
-`
+`;
+
