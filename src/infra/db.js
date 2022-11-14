@@ -4,3 +4,8 @@
 
 //aquivo responsável por criar a tabela e popular o banco de dados
 const sqlite3 = require('sqlite3').verbose()
+const path = require('path')
+const caminhoArq = path.resolve(__dirname, 'database.db')
+//importante que o caminho abaixo seja o mesmo que o indicado no arquivo
+//que exporta db (sqlite-db.js)
+const db = new sqlite3.Database(caminhoArq)
