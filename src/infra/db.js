@@ -19,4 +19,11 @@ const LISTA_ITENS = `
         "QTD" INTEGER,
         "VALOR" FLOAT
     );
+`;
+
+const ADD_ITEM_DATA = `
+    INSERT INTO LISTA (ID, ITEM, QTD, VALOR)
+    VALUES
+        (1, 'Arroz', 3, 10,50),
+        (2, 'Feijao', 1, 6,50)
 `
