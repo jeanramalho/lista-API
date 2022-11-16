@@ -14,3 +14,4 @@ Projeto para criar uma API de uma lista de compras.
 
 ## Instalação
 
+Baixe o projeto do github utilizando o comando git clone.
