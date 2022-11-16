@@ -15,3 +15,7 @@ Projeto para criar uma API de uma lista de compras.
 ## Instalação
 
 Baixe o projeto do github utilizando o comando git clone.
+
+```s
+git clone https://github.com/jeanramalho/projeto-final-modulo4-resilia.git
+```
