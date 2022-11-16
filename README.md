@@ -19,3 +19,8 @@ Baixe o projeto do github utilizando o comando git clone.
 ```s
 git clone https://github.com/jeanramalho/projeto-final-modulo4-resilia.git
 ```
+Em Seguida instale os pacotes, executando o seguinte comando com o terminal dentro da página
+
+```s
+npm install
+```
