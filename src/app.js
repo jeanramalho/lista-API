@@ -2,21 +2,25 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-//Importar a controller
+//Importa a controller com rotas
+const usuario = require('./Controller/usuarioController')
 
+//Importa rota principal
+const principal = require('./Controller/principalController')
 
-//Importar rota principal
-
-
-//Importar o Banco de dados SQLite
-
+//Importa o Banco de dados SQLite
+const bd = require('./Infra/sqlite-db')
 
 //Utilizando Middlewares
-
-
-//Utilizando Cors para liberar a comunicação externa
-
+app.use(express.json())
+app.use((req, res, next) => {
+    next()
+})
+//Utilizando o Cors para liberar a comunicação externa
+app.use(cors())
 
 //Rotas
+usuario(app,bd)
+principal(app)
 
 module.exports = app

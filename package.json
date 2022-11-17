@@ -1,33 +1,33 @@
 {
-  "name": "lista-api",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "sqlite3": "^5.0.2"
+  },
+  "name": "projeto-final-modulo4-resilia",
+  "description": "Neste módulo o desafio do projeto final proposto ao grupo é criar uma API Rest completa sobre o tema determinado, cada participante fica responsável por uma determinada entidade. Em grupos utilizamos as habilidades de SoftSkills, realizamos sprints para decidir cada parte do projeto e padronização do mesmo, assim como as entidades que cada participante do grupo ficaria responsável. Neste caso, fiquei responsável pela entidade USUÁRIO.",
   "version": "1.0.0",
-  "description": "Projeto de lista api",
   "main": "./src/server.js",
+  "devDependencies": {
+    "jest": "^27.4.2",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
   "scripts": {
-    
-      "test": "jest",
-      "start": "nodemon ./src/server.js",
-      "database": "node ./src/infra/create-db.js"
-    
+    "test": "jest",
+    "start": "nodemon ./src/server.js",
+    "database": "node ./src/infra/create-db.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeanramalho/lista-API.git"
+    "url": "git+https://github.com/jeanramalho/projeto-final-modulo4-resilia.git"
   },
   "author": "jeanramalho",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jeanramalho/lista-API/issues"
+    "url": "https://github.com/jeanramalho/projeto-final-modulo4-resilia/issues"
   },
-  "homepage": "https://github.com/jeanramalho/lista-API#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "jest": "^29.3.1",
-    "moment": "^2.29.4",
-    "nodemon": "^2.0.20",
-    "sqlite3": "^5.1.2",
-    "supertest": "^6.3.1"
-  }
+  "engines": {"node": "16.13.0"},
+  "homepage": "https://github.com/jeanramalho/projeto-final-modulo4-resilia#readme"
 }
-
