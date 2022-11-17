@@ -16,7 +16,9 @@ Projeto para criar uma API de uma lista de compras.
 
 Para a inicialização do banco de dados é necessário rodar o comando que vai gerar o arquivo.
 
-
+```s
+npm run database
+```
 
 ## Instalação
 
