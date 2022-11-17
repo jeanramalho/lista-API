@@ -51,4 +51,3 @@ npm init
 * /item
 
 
-atualizando
