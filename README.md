@@ -40,3 +40,8 @@ npm init
 ```
 ## Métodos
 
+* GET
+* POST
+* PUT
+* PATCH
+* DELETE
