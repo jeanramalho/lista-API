@@ -47,3 +47,5 @@ npm init
 * DELETE
 
 ## Rotas
+
+* /item
