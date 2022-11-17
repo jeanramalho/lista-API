@@ -24,3 +24,5 @@ Em Seguida instale os pacotes, executando o seguinte comando com o terminal dent
 ```s
 npm install
 ```
+
+Após a instalaçdos pacotes, é necessária a inicialização do sistema.
