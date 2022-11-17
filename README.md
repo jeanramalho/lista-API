@@ -12,6 +12,10 @@ Projeto para criar uma API de uma lista de compras.
 
 * API que vai receber os dados dos itens de uma lista e armazenar em um arquivo DAO via sqLite3.
 
+## Banco de dados
+
+Para a inicialização do banco de dados é necessário rodar o comando que vai gerar o arquivo.
+
 
 
 ## Instalação
