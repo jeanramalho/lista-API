@@ -12,6 +12,8 @@ Projeto para criar uma API de uma lista de compras.
 
 * API que vai receber os dados dos itens de uma lista e armazenar em um arquivo DAO via sqLite3.
 
+
+
 ## Instalação
 
 Baixe o projeto do github utilizando o comando git clone.
@@ -26,3 +28,7 @@ npm install
 ```
 
 Após a instalaçdos pacotes, é necessária a inicialização do sistema.
+
+```s
+npm init
+```
