@@ -38,3 +38,5 @@ Após a instalaçdos pacotes, é necessária a inicialização do sistema.
 ```s
 npm init
 ```
+## Métodos
+
