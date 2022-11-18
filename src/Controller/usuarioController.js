@@ -1,4 +1,4 @@
-const Usuario = require('../Models/Usuario')
+const Usuario = require('../Models/Item')
 const UsuarioDAO = require('../DAO/UsuarioDAO')
 
 
