@@ -13,8 +13,7 @@ class Item {
 
         this.nome = nome
         this.valor = valor
-        this.qtd = qtd
-        
+        this.qtd = qtd    
     
        
        
