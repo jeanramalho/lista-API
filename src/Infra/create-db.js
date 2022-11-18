@@ -28,8 +28,8 @@ function criaTabelaItem() {
 }
 
 //função que popula tabela utilizando a variavel com codigo
-function populaTabelaUser() {
-    db.run(ADD_USUARIO_TESTE, (error)=> {
+function populaTabelaItem() {
+    db.run(ADD_ITEM_TESTE, (error)=> {
        if (error) console.log("Erro ao popular tabela de usuários")
     })
 }
