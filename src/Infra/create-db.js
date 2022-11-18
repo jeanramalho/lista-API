@@ -5,15 +5,12 @@ const db = new sqlite3.Database(caminhoArq)
 
 
 //variavel com codico sql para criação da tabela
-const USUARIOS_SCHEMA = `
+const ITEM_SCHEMA = `
 CREATE TABLE IF NOT EXISTS "USUARIOS" (
     "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
     "NOME" varchar(70),
-    "TELEFONE" varchar(70),
-    "EMAIL" varchar(70),
-    "ENDERECO" varchar(100),
-    "SENHA" varchar(15),
-    "ADMINISTRADOR" varchar(7)
+    "VALOR" REAL,
+    "QTD" INTEGER
 )`
 
 //variavel com codigo sql para popular tabela com usuario teste
