@@ -1,7 +1,7 @@
 var id = 0
 
 //Classe que modela a criação do usuario 
-class Usuario {
+class Item {
     constructor(nome, telefone, email, endereco, senha, administrador, array, idExistente) {
         if(array){
             if(idExistente) {
@@ -44,4 +44,4 @@ class Usuario {
 
 
 
-module.exports = Usuario
+module.exports = Item
