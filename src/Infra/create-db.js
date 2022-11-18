@@ -14,10 +14,10 @@ CREATE TABLE IF NOT EXISTS "USUARIOS" (
 )`
 
 //variavel com codigo sql para popular tabela com usuario teste
-const ADD_USUARIO_TESTE = `
-INSERT INTO USUARIOS (ID, NOME, TELEFONE, EMAIL, ENDERECO, SENHA, ADMINISTRADOR)
+const ADD_ITEM_TESTE = `
+INSERT INTO USUARIOS (ID, NOME, VALOR, QTD)
 VALUES 
-    (1, 'Teste Testando','0000-0000', 'teste@testando.com', 'Rua do teste,15', '12345678', 'true')    
+    (1, 'Teste Testando','22,50', '2')    
 `
 
 //função que cria tabela utilizando a variavel com codigo
