@@ -21,9 +21,9 @@ VALUES
 `
 
 //função que cria tabela utilizando a variavel com codigo
-function criaTabelaUsr() {
-    db.run(USUARIOS_SCHEMA, (error) => {
-       if (error) console.log("Erro ao criar tabela de usuários")
+function criaTabelaItem() {
+    db.run(ITEM_SCHEMA, (error) => {
+       if (error) console.log("Erro ao criar tabela de item")
     })
 }
 
