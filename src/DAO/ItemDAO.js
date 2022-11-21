@@ -61,10 +61,10 @@ class ItemDAO {
     }
 
 
-    //lista somente usuario cadastrado com id solicitado
-    async getUserId(id) {
+    //lista somente item cadastrado com id solicitado
+    async geItemId(id) {
         try{
-            const sql = `SELECT * FROM USUARIOS WHERE ID = ?`
+            const sql = `SELECT * FROM ITEM WHERE ID = ?`
 
             return new Promise((resolve, reject) => {
                 this.bd.all(sql, id, (error, rows) => {
