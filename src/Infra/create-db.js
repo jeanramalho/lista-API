@@ -36,8 +36,8 @@ function populaTabelaItem() {
 
 //ordena a execução das funções
 db.serialize(() => {
-    criaTabelaUsr();
-    populaTabelaUser();
+    criaTabelaItem();
+    populaTabelaItem();
 })
 
 
