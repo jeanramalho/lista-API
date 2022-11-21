@@ -149,7 +149,7 @@ class ItemDAO {
 
 
     //atualiza item
-    async updateUser(id, newitem){
+    async updateItem(id, newitem){
         try {
             const sql = `UPDATE ITEM SET NOME = ?, VALOR = ?, QTD = ?, WHERE ID = ?`
 
