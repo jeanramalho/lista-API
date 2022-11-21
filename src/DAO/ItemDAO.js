@@ -177,4 +177,4 @@ class ItemDAO {
     
 }
 
-module.exports = UsuarioDAO
+module.exports = ItemDAO
