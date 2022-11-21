@@ -9,7 +9,7 @@ class ItemDAO {
     async getAllItens() {
         try {
             return new Promise((resolve, reject) => {
-                const sql = 'SELECT * FROM item'
+                const sql = 'SELECT * FROM ITEM'
     
                 this.bd.all(sql, (error, rows) => {
                     if(error) {
@@ -34,13 +34,13 @@ class ItemDAO {
     }
 
 
-    //lista somente usuário cadastrado com o email solicitado
-    async getUserEmail(email) {
+    //lista somente item cadastrado com o nome solicitado
+    async getItemName(name) {
        try{
-        const sql = `SELECT * FROM USUARIOS WHERE EMAIL = ?`
+        const sql = `SELECT * FROM ITEM WHERE NOME = ?`
 
         return new Promise((resolve, reject) => {
-            this.bd.all(sql, email, (error, rows) => {
+            this.bd.all(sql, name, (error, rows) => {
                 if(error) {
                     reject({
                         "mensagem" : error.message,
