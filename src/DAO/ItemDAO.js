@@ -88,7 +88,7 @@ class ItemDAO {
     }
 
     //Insere novo item no banco de dados
-    async putUser(novoItem) {
+    async putItem(novoItem) {
 
         try {
             const sql = 'INSERT INTO ITEM (nome, valor, qtd) VALUES (?,?,?)'
