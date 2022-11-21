@@ -87,14 +87,14 @@ class ItemDAO {
         
     }
 
-    //Insere novo usuario no banco de dados
-    async putUser(novoUsuario) {
+    //Insere novo item no banco de dados
+    async putUser(novoItem) {
 
         try {
-            const sql = 'INSERT INTO USUARIOS (nome, telefone, email, endereco, senha, administrador) VALUES (?,?,?,?,?,?)'
+            const sql = 'INSERT INTO ITEM (nome, valor, qtd) VALUES (?,?,?)'
                 
             return new Promise((resolve, reject) => {
-                this.bd.run(sql, [novoUsuario.nome, novoUsuario.telefone, novoUsuario.email, novoUsuario.endereco, novoUsuario.senha, novoUsuario.administrador], 
+                this.bd.run(sql, [novoItem.nome, novoItem.valor, novoItem.qtd], 
                     (error) => {
                         if(error) {
                             reject({
