@@ -148,13 +148,13 @@ class ItemDAO {
     
 
 
-    //atualiza usuario
-    async updateUser(id, newUser){
+    //atualiza item
+    async updateUser(id, newitem){
         try {
-            const sql = `UPDATE USUARIOS SET NOME = ?, TELEFONE = ?, EMAIL = ?, ENDERECO = ?, SENHA = ? WHERE ID = ?`
+            const sql = `UPDATE ITEM SET NOME = ?, VALOR = ?, QTD = ?, WHERE ID = ?`
 
             return new Promise((resolve, reject) => {
-                this.bd.run(sql, [newUser.nome, newUser.telefone, newUser.email, newUser.endereco, newUser.Senha, id], (error) => {
+                this.bd.run(sql, [newitem.nome, newitem.valor, newitem.qtd, id], (error) => {
                     if(error) {
                         reject({
                             "mensagem" : error.message,
@@ -162,8 +162,8 @@ class ItemDAO {
                         })
                     } else {
                         resolve({
-                            "mensagem" : `Usuário com ID ${id} foi atualizado com sucesso!`,
-                            "usuario" : newUser,
+                            "mensagem" : `Item com ID ${id} foi atualizado com sucesso!`,
+                            "usuario" : newitem,
                             "erro" : false
                         })
                     }
