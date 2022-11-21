@@ -1,4 +1,4 @@
-class UsuarioDAO {
+class ItemDAO {
     constructor(bd) {
         this.bd = bd
     }
@@ -6,10 +6,10 @@ class UsuarioDAO {
  //funções assincronas que realizam operações CRUD   
 
  //Lista todos os usuarios
-    async getAllUsers() {
+    async getAllItens() {
         try {
             return new Promise((resolve, reject) => {
-                const sql = 'SELECT * FROM usuarios'
+                const sql = 'SELECT * FROM item'
     
                 this.bd.all(sql, (error, rows) => {
                     if(error) {

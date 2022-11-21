@@ -6,7 +6,7 @@ const db = new sqlite3.Database(caminhoArq)
 
 //variavel com codico sql para criação da tabela
 const ITEM_SCHEMA = `
-CREATE TABLE IF NOT EXISTS "USUARIOS" (
+CREATE TABLE IF NOT EXISTS "ITEM" (
     "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
     "NOME" varchar(70),
     "VALOR" REAL,
