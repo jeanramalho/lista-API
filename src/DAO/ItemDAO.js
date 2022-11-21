@@ -116,12 +116,12 @@ class ItemDAO {
     }
 
 
-    //deleta usuario do banco de dados
-    async deleteUser(id) {
+    //deleta Item do banco de dados
+    async deleteItem(id) {
         try {
-            const user = await this.getUserId(id)
-            if(user.requisicao.length) {
-                const sql = `DELETE FROM USUARIOS WHERE ID = ?`
+            const item = await this.getItemId(id)
+            if(item.requisicao.length) {
+                const sql = `DELETE FROM ITEM WHERE ID = ?`
 
                 return new Promise((resolve, reject) => {
                     this.bd.run(sql, id, (error) => {
@@ -132,14 +132,14 @@ class ItemDAO {
                             })
                         } else {
                             resolve({
-                                "mensagem" : `Usuário com ID ${id} foi deletado`,
+                                "mensagem" : `Item com ID ${id} foi deletado`,
                                 "erro" : false
                             })
                         }
                     })
                 })
             } else {
-                throw new Error(`Usuário com ID ${id} não foi encontrado`)
+                throw new Error(`Item com ID ${id} não foi encontrado`)
             }
         } catch(error) {
             throw new Error(error.message)
