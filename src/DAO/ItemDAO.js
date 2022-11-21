@@ -5,7 +5,7 @@ class ItemDAO {
  
  //funções assincronas que realizam operações CRUD   
 
- //Lista todos os usuarios
+ //Lista todos os Itens
     async getAllItens() {
         try {
             return new Promise((resolve, reject) => {
