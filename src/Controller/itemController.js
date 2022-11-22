@@ -18,12 +18,12 @@ const item = (app, bd) => {
     }
     })
 
-    //get da rota usuário/:email lista somente usuarios com o email solicitado
-    app.get('/usuario/:email', async (req, res) => {
-        const email = req.params.email
+    //get da rota item/:name lista somente itens com o nome solicitado
+    app.get('/item/:name', async (req, res) => {
+        const name = req.params.name
 
         try {
-            const resposta = await novoUsuarioDAO.getUserEmail(email)
+            const resposta = await novoItemDAO.getItemName(name)
             res.json(resposta)
         } catch(error) {
             res.status(404).json(error)
