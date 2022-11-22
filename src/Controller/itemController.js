@@ -1,5 +1,5 @@
-const Usuario = require('../Models/Item')
-const UsuarioDAO = require('../DAO/UsuarioDAO')
+const Item = require('../Models/Item')
+const ItemDAO = require('../DAO/ItemDAO')
 
 
 //lista de rotas utilizadas na API que realizam operções CRUD com verbos HTTP com as funções assincronas do aquivo usuariosDAO.js 
