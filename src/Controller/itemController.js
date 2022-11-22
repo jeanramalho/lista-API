@@ -2,15 +2,15 @@ const Item = require('../Models/Item')
 const ItemDAO = require('../DAO/ItemDAO')
 
 
-//lista de rotas utilizadas na API que realizam operções CRUD com verbos HTTP com as funções assincronas do aquivo usuariosDAO.js 
-const usuario = (app, bd) => {
-    const novoUsuarioDAO = new UsuarioDAO(bd)
+//lista de rotas utilizadas na API que realizam operções CRUD com verbos HTTP com as funções assincronas do aquivo itemDAO.js 
+const item = (app, bd) => {
+    const novoItemDAO = new ItemDAO(bd)
 
-    //get da rota usuários lista todos os usuários
-    app.get('/usuarios', async (req, res) => {
+    //get da rota itens lista todos os itens
+    app.get('/itens', async (req, res) => {
         
         try {            
-            const resposta = await novoUsuarioDAO.getAllUsers()
+            const resposta = await novoItemDAO.getAllItens()
             res.json(resposta)
     } catch(error) {
 
