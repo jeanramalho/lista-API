@@ -42,13 +42,13 @@ const item = (app, bd) => {
     })
 
 
-    //post da rota usuario insere novo registro de usuário no banco de dados
-    app.post('/usuario', async (req, res) => {       
+    //post da rota item insere novo registro de item no banco de dados
+    app.post('/item', async (req, res) => {       
         try {
             const body = req.body
-            const novoUsuario = new Usuario(body.nome, body.telefone, body.email, body.endereco, body.senha, body.administrador)
+            const novoItem = new Item(body.nome, body.valor, body.qtd)
 
-            const resposta = await novoUsuarioDAO.putUser(novoUsuario)
+            const resposta = await novoItemDAO.putItem(novoItem)
             res.json(resposta)
             
 
