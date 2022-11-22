@@ -30,11 +30,11 @@ const item = (app, bd) => {
         }
     })
 
-    //get da rota usuarioid/:id lista somente usuário com id solicitado
-    app.get('/usuarioid/:id', async (req, res) => {
+    //get da rota itemid/:id lista somente item com id solicitado
+    app.get('/itemid/:id', async (req, res) => {
         const id = req.params.id
         try {
-            const resposta = await novoUsuarioDAO.getUserId(id)
+            const resposta = await novoItemDAO.geItemId(id)
             res.json(resposta)
         } catch(error) {
             res.status(404).json(error)
