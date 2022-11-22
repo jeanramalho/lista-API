@@ -61,31 +61,28 @@ const item = (app, bd) => {
     })
 
 
-    //put da roata usuarioup/:id atualiza usuario com id informado 
-    app.put('/usuarioup/:id', async (req, res) => {
+    //put da rota itemup/:id atualiza item com id informado 
+    app.put('/itemup/:id', async (req, res) => {
         const id = req.params.id
         const body = req.body
 
         try {
             
-            const respostaGet = await novoUsuarioDAO.getUserId(id)
-            const usuarioAntigo = respostaGet.requisicao[0]
+            const respostaGet = await novoItemDAO.getItemId(id)
+            const itemAntigo = respostaGet.requisicao[0]
 
-            if(usuarioAntigo) {
-                const usuarioAtualizado = new Usuario(
+            if(itemAntigo) {
+                const itemAtualizado = new Item(
                     body.nome || usuarioAntigo.NOME,
-                    body.telefone || usuarioAntigo.TELEFONE,
-                    body.email || usuarioAntigo.EMAIL,
-                    body.endereco || usuarioAntigo.ENDERECO,
-                    body.senha || usuarioAntigo.SENHA,
-                    body.administrador || usuarioAntigo.ADMINISTRADOR
+                    body.valor || usuarioAntigo.VALOR,
+                    body.qtd || usuarioAntigo.QTD
                     ) 
 
-                    const resposta = await novoUsuarioDAO.updateUser(id, usuarioAtualizado)
+                    const resposta = await novoItemDAO.updateItem(id, itemAtualizado)
                     res.json(resposta)
             } else {
                 res.json({
-                    "mensagem" : `Usuario com ID ${id} não foi encontrado`,
+                    "mensagem" : `Item com ID ${id} não foi encontrado`,
                     "error" : true
                 })
             }
