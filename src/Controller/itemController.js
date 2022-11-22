@@ -95,11 +95,11 @@ const item = (app, bd) => {
     })
 
 
-    //delete da rota usuariodel/:id deleta usuario com id informado
-    app.delete('/usuariodel/:id', async (req, res) => {
+    //delete da rota itemdel/:id deleta item com id informado
+    app.delete('/itemdel/:id', async (req, res) => {
         const id = parseInt(req.params.id)
         try {
-            const resposta = await novoUsuarioDAO.deleteUser(id)
+            const resposta = await novoitemDAO.deleteItem(id)
             res.json(resposta)
         } catch(error) {
             res.status(404).json({
@@ -113,4 +113,4 @@ const item = (app, bd) => {
 
 
 
-module.exports = usuario
+module.exports = item
