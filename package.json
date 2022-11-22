@@ -5,8 +5,8 @@
     "moment": "^2.29.1",
     "sqlite3": "^5.0.2"
   },
-  "name": "projeto-final-modulo4-resilia",
-  "description": "Neste módulo o desafio do projeto final proposto ao grupo é criar uma API Rest completa sobre o tema determinado, cada participante fica responsável por uma determinada entidade. Em grupos utilizamos as habilidades de SoftSkills, realizamos sprints para decidir cada parte do projeto e padronização do mesmo, assim como as entidades que cada participante do grupo ficaria responsável. Neste caso, fiquei responsável pela entidade USUÁRIO.",
+  "name": "lista-api",
+  "description": "API que irá salvar lista itens de uma lista de compras",
   "version": "1.0.0",
   "main": "./src/server.js",
   "devDependencies": {
@@ -21,13 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeanramalho/projeto-final-modulo4-resilia.git"
+    "url": "git+https://github.com/jeanramalho/lista-API.git"
   },
   "author": "jeanramalho",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jeanramalho/projeto-final-modulo4-resilia/issues"
+    "url": "https://github.com/jeanramalho/lista-API.git/issues"
   },
   "engines": {"node": "16.13.0"},
-  "homepage": "https://github.com/jeanramalho/projeto-final-modulo4-resilia#readme"
+  "homepage": "https://github.com/jeanramalho/lista-API.git#readme"
 }
