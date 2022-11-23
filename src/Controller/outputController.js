@@ -10,7 +10,7 @@ const output = `
     <title>API Usuários</title>
     <style>
         body{
-            background-image: url(https://victoria.mediaplanet.com/app/uploads/sites/58/2020/12/Flat-illustration-of-diverse-people.jpg);
+            background-image: src("./img/Itens.webp");
             background-color: black;
             background-size: cover;
         }
