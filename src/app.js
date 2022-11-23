@@ -3,7 +3,7 @@ const app = express()
 const cors = require('cors')
 
 //Importa a controller com rotas
-const usuario = require('./Controller/usuarioController')
+const item = require('./Controller/itemController')
 
 //Importa rota principal
 const principal = require('./Controller/principalController')
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 app.use(cors())
 
 //Rotas
-usuario(app,bd)
+item(app,bd)
 principal(app)
 
 module.exports = app
