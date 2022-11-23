@@ -70,9 +70,9 @@ const output = `
 <body>
     <div class='fundo'>
 
-        <h1>API USUÁRIOS</h1>
+        <h1>LISTA API</h1>
         <h2>Bem Vindo</h2>
-        <a href="https://github.com/jeanramalho/projeto-final-modulo4-resilia" target="_blank">
+        <a href="https://github.com/jeanramalho/lista-API.git" target="_blank">
             <button>SAIBA MAIS</button>
         </a>
 
