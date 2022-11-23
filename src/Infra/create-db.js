@@ -9,15 +9,15 @@ const ITEM_SCHEMA = `
 CREATE TABLE IF NOT EXISTS "ITEM" (
     "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
     "NOME" varchar(70),
-    "VALOR" FLOAT,
+    "VALOR" REAL,
     "QTD" INTEGER
 )`
 
 //variavel com codigo sql para popular tabela com usuario teste
 const ADD_ITEM_TESTE = `
-INSERT INTO USUARIOS (ID, NOME, VALOR, QTD)
+INSERT INTO ITEM (ID, NOME, VALOR, QTD)
 VALUES 
-    (1, 'Teste Testando', 22.56, 2)    
+    (1, 'Teste Testando', 22.52, 2)    
 `
 
 //função que cria tabela utilizando a variavel com codigo
