@@ -73,9 +73,9 @@ const item = (app, bd) => {
 
             if(itemAntigo) {
                 const itemAtualizado = new Item(
-                    body.nome || usuarioAntigo.NOME,
-                    body.valor || usuarioAntigo.VALOR,
-                    body.qtd || usuarioAntigo.QTD
+                    body.nome || itemAntigo.NOME,
+                    body.valor || itemAntigo.VALOR,
+                    body.qtd || itemAntigo.QTD
                     ) 
 
                     const resposta = await novoItemDAO.updateItem(id, itemAtualizado)
