@@ -99,7 +99,7 @@ const item = (app, bd) => {
     app.delete('/itemdel/:id', async (req, res) => {
         const id = parseInt(req.params.id)
         try {
-            const resposta = await novoitemDAO.deleteItem(id)
+            const resposta = await novoItemDAO.deleteItem(id)
             res.json(resposta)
         } catch(error) {
             res.status(404).json({
