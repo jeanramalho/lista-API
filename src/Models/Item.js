@@ -2,7 +2,7 @@ var id = 0
 
 //Classe que modela a criação do usuario 
 class Item {
-    constructor(nome, valor, qtd, idExistente) {
+    constructor(nome, valor, qtd, array, idExistente) {
         if(array){
             if(idExistente) {
                 this.id = idExistente

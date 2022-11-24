@@ -34,7 +34,7 @@ const item = (app, bd) => {
     app.get('/itemid/:id', async (req, res) => {
         const id = req.params.id
         try {
-            const resposta = await novoItemDAO.geItemId(id)
+            const resposta = await novoItemDAO.getItemId(id)
             res.json(resposta)
         } catch(error) {
             res.status(404).json(error)

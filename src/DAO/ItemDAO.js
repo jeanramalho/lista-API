@@ -62,7 +62,7 @@ class ItemDAO {
 
 
     //lista somente item cadastrado com id solicitado
-    async geItemId(id) {
+    async getItemId(id) {
         try{
             const sql = `SELECT * FROM ITEM WHERE ID = ?`
 
@@ -103,7 +103,7 @@ class ItemDAO {
                             })
                         } else {
                             resolve({
-                                "requisicao" : novoUsuario,
+                                "requisicao" : novoItem,
                                 "erro" : false
                             })
                         }
