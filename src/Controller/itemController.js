@@ -62,37 +62,67 @@ const item = (app, bd) => {
 
 
     //put da rota itemup/:id atualiza item com id informado 
-    app.put('/itemup/:id', async (req, res) => {
-        const id = req.params.id
+    app.put('/itemup/:id', async (req,res)=>{
+        const id = parseInt(req.params.id) 
         const body = req.body
-
+        
         try {
-            
             const respostaGet = await novoItemDAO.getItemId(id)
             const itemAntigo = respostaGet.requisicao[0]
 
-            if(itemAntigo) {
-                const itemAtualizado = new Item(
-                    body.nome || itemAntigo.NOME,
-                    body.valor || itemAntigo.VALOR,
-                    body.qtd || itemAntigo.QTD
-                    ) 
-
-                    const resposta = await novoItemDAO.updateItem(id, itemAtualizado)
-                    res.json(resposta)
+            if(itemAntigo){
+                const itemAtualizado = new Item (
+                  body.NOME || itemAntigo.NOME,
+                  body.VALOR || itemAntigo.VALOR,
+                  body.QTD || itemAntigo.QTD
+                )
+                const resposta = await novoItemDAO.updateItem(id, itemAtualizado)
+                res.json(resposta)               
             } else {
-                res.json({
-                    "mensagem" : `Item com ID ${id} não foi encontrado`,
+                res.status(404).json({
+                    "mensagem": `Item com ID ${id} não foi encontrado`,
                     "error" : true
                 })
             }
-        } catch(error) {
-            res.json({
+        } catch (error) {
+            res.status(400).json({
                 "mensagem" : error.message,
                 "error" : true
             })
         }
     })
+
+    // app.put('/itemup/:id', async (req, res) => {
+    //     const id = req.params.id
+    //     const body = req.body
+
+    //     try {
+            
+    //         const respostaGet = await novoItemDAO.getItemId(id)
+    //         const itemAntigo = respostaGet.requisicao[0]
+
+    //         if(itemAntigo) {
+    //             const itemAtualizado = new Item(
+    //                 body.nome || itemAntigo.NOME,
+    //                 body.valor || itemAntigo.VALOR,
+    //                 body.qtd || itemAntigo.QTD
+    //                 ) 
+
+    //                 const resposta = await novoItemDAO.updateItem(id, itemAtualizado)
+    //                 res.json(resposta)
+    //         } else {
+    //             res.json({
+    //                 "mensagem" : `Item com ID ${id} não foi encontrado`,
+    //                 "error" : true
+    //             })
+    //         }
+    //     } catch(error) {
+    //         res.json({
+    //             "mensagem" : error.message,
+    //             "error" : true
+    //         })
+    //     }
+    // })
 
 
     //delete da rota itemdel/:id deleta item com id informado

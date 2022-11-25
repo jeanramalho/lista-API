@@ -149,30 +149,54 @@ class ItemDAO {
 
 
     //atualiza item
-    async updateItem(id, newitem){
-        try {
-            const sql = `UPDATE ITEM SET NOME = ?, VALOR = ?, QTD = ?, WHERE ID = ?`
+    async updateItem(id, item) {
+        return new Promise((resolve, reject) => {     
 
-            return new Promise((resolve, reject) => {
-                this.bd.run(sql, [newitem.nome, newitem.valor, newitem.qtd, id], (error) => {
-                    if(error) {
-                        reject({
-                            "mensagem" : error.message,
-                            "erro" : true
-                        })
-                    } else {
-                        resolve({
-                            "mensagem" : `Item com ID ${id} foi atualizado com sucesso!`,
-                            "usuario" : newitem,
-                            "erro" : false
-                        })
-                    }
-                })
-            })
-        } catch(error) {
-            throw new Error(error.message)
-        }
-    }
+                const sql = `UPDATE ITEM SET NOME = ?, VALOR = ?, QTD = ?, WHERE ID = ?`
+
+                 const array = [item.nome, item.valor, item.qtd, id]
+                 this.bd.run(sql, array, (error) => {
+                     if (error) {
+                         reject({
+                             "mensagem" : error.message,
+                             "erro" : true
+                          } )
+                     } else {
+                         resolve({
+                             "mensagem": `Item com ID ${id} foi atualizado com sucesso!`,
+                             "item": item,
+                             "erro": false
+                         })
+                     }
+                 })
+             })
+         
+ 
+     }
+    // async updateItem(id, newitem){
+    //     try {
+    //         const sql = `UPDATE ITEM SET NOME = ?, VALOR = ?, QTD = ?, WHERE ID = ?`
+
+    //         return new Promise((resolve, reject) => {
+    //             this.bd.run(sql, [newitem.nome, newitem.valor, newitem.qtd, id], (error) => {
+    //                 if(error) {
+    //                     reject({
+    //                         "mensagem" : error.message,
+    //                         "erro" : true
+    //                     })
+    //                 } else {
+    //                     resolve({
+    //                         "mensagem" : `Item com ID ${id} foi atualizado com sucesso!`,
+    //                         "usuario" : newitem,
+    //                         "erro" : false
+    //                     })
+    //                 }
+    //             })
+    //         })
+    //     } catch(error) {
+    //         throw new Error(error.message)
+    //     }
+    // }
 
     
 }
