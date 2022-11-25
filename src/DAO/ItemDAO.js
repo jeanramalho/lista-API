@@ -154,7 +154,7 @@ class ItemDAO {
             const sql = `UPDATE ITEM SET NOME = ?, VALOR = ?, QTD = ?, WHERE ID = ?`
 
             return new Promise((resolve, reject) => {
-                this.bd.run(sql, [newitem.nome, newitem.valor, newitem.qtd, id], (error) => {
+                this.bd.run(sql, [newitem.NOME, newitem.VALOR, newitem.QTD, id], (error) => {
                     if(error) {
                         reject({
                             "mensagem" : error.message,
